@@ -19,13 +19,16 @@ let font,
 let snowflakes = []; // array to hold snowflake objects
 let c;
 
+var song;
+var sound;
+
 
 function preload() {
   // Ensure the .ttf or .otf font stored in the assets directory
   // is loaded before setup() and draw() are called
-  font = loadFont('Raleway-Regular.ttf');
-  song = loadSound('switch.mp3');
-  sound = loadSound('beep.mp3');
+  font = loadFont("Raleway-Regular.ttf");
+  song = loadSound("switch.mp3");
+  sound = loadSound("beep.mp3");
   //preload the sound file
 }
 
