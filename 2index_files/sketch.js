@@ -73,7 +73,9 @@ function draw() {
   background(20, 20);
   fill(255, 10)
   text('press t to toggle source', 20, 20);
-
+  text('click', displayWidth/2.5 , displayHeight*0.1)
+    text('drag', displayWidth/2 , displayHeight*0.2)
+    text('release', displayWidth/1.63 , displayHeight*0.3)
   var level = amplitude.getLevel();
 
   // rectangle variables
@@ -99,11 +101,13 @@ function draw() {
 
     var hueValue = map(h, minHeight, height, 200, 255);
 
-    fill(hueValue, 255, 255, alphaValue);
+    fill(240);
 
     rect(x, height/2, w, h);
     rect(width - x, height/2, w, h);
   }
+
+
   var t = map(mouseX/2, 0, width/2, 0, 1.0);
     var c = lerpColor(r, b, t);
     var d = lerpColor(r, a, t);

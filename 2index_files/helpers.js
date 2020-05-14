@@ -45,7 +45,7 @@ function logMap(val, inMin, inMax, outMin, outMax) {
 /**
  * Given an index and the total number of entries, return the
  * log-scaled value.
- * 
+ *
  * https://github.com/borismus/spectrograph/blob/master/g-spectrograph.js
  * MIT license
  */
@@ -102,7 +102,7 @@ function splitOctaves(spectrum, slicesPerOctave) {
   var n = slicesPerOctave|| 3;
   var nthRootOfTwo = Math.pow(2, 1/n);
 
-  // the last N bins get their own 
+  // the last N bins get their own
   var lowestBin = 3;
 
   var binIndex = len - 1;
