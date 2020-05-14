@@ -29,20 +29,31 @@ function preload() {
   font = loadFont("Raleway-Regular.ttf");
   song = loadSound("switch.mp3");
   sound = loadSound("beep.mp3");
+  music = loadSound("song.mp3");
   //preload the sound file
 }
 
 
 
 function setup() {
+  music.play();
+  s = color(mouseX/2, 0, width/2, 0, 1.0);
   r = color(50, mouseY/2, 50, height/2, 1.0);
   b = color(20, 200, 150);
+  a = color(200, 200, 150);
   createCanvas(displayWidth, displayHeight);
   // displayWidth and displayHeight make the canvas response to mobile as well.
-  fill(240);
   noStroke();
   textSize(fontsize);
   textAlign(CENTER, CENTER);
+
+  colorMode(HSL);
+  var colors = [];
+  for(var i = 0; i < 3; i++) {
+    var newColor = color(random(360), random(100), random(100));
+    colors.push(newColor);
+    fill(random(colors));
+  }
 }
 
 function mousePressed() {
@@ -55,8 +66,12 @@ function mouseReleased() {
 
 function draw() {
   var t = map(mouseX/2, 0, width/2, 0, 1.0);
+
   var c = lerpColor(r, b, t);
+  var d = lerpColor(r, a, t);
   background(c);
+  fill(d);
+
   text('click', displayWidth/2.5 , displayHeight*0.1)
   text('or', displayWidth/2 , displayHeight*0.2)
   text('shake', displayWidth/1.63 , displayHeight*0.3)
