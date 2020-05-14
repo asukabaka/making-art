@@ -72,7 +72,7 @@ function mouseReleased() {
 function draw() {
   background(20, 20);
   fill(255, 10)
-  text('press t to toggle source', 20, 20);
+  text('press t to toggle source', displayWidth/4 , displayHeight*0.1);
   text('click', displayWidth/2.5 , displayHeight*0.1)
     text('drag', displayWidth/2 , displayHeight*0.2)
     text('release', displayWidth/1.63 , displayHeight*0.3)
