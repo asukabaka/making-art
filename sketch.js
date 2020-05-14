@@ -73,8 +73,8 @@ function draw() {
   fill(d);
 
   text('click', displayWidth/2.5 , displayHeight*0.1)
-  text('or', displayWidth/2 , displayHeight*0.2)
-  text('shake', displayWidth/1.63 , displayHeight*0.3)
+  text('and', displayWidth/2 , displayHeight*0.2)
+  text('drag', displayWidth/1.63 , displayHeight*0.3)
   //I used percentages instead of fixed to make it responsive on mobile as well.
 
   if (mouseIsPressed) {//if mouse is pressed the sketch progresses at 1 frame per second
