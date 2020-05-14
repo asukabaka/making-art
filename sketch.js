@@ -66,11 +66,10 @@ function mouseReleased() {
 
 function draw() {
   var t = map(mouseX/2, 0, width/2, 0, 1.0);
-
   var c = lerpColor(r, b, t);
   var d = lerpColor(r, a, t);
   background(c);
-  fill(d);
+  fill(240);
 
   text('click', displayWidth/2.5 , displayHeight*0.1)
   text('and', displayWidth/2 , displayHeight*0.2)
